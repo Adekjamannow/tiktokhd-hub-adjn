@@ -1,96 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f1e6" />
+  <title>TikTok HD Upload Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #f7f1e6;
+      --cream2: #ece1cd;
+      --cream3: #e2d3bb;
+      --card: #fdfaf3;
+      --border: #e2d6bf;
+      --text: #3a352c;
+      --muted: #766d5d;
+      --green: #5fae6f;
+      --green-bg: #dcecdf;
+      --green-dark: #3f7a4d;
+      --red: #b85b4d;
+      --red-bg: #f4e1dc;
+      --shadow: 0 18px 48px rgba(75, 61, 39, .10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; color: var(--text);
+      background:
+        radial-gradient(circle at 8% 8%, rgba(95,174,111,.11), transparent 27rem),
+        radial-gradient(circle at 94% 88%, rgba(226,211,187,.55), transparent 25rem),
+        var(--cream);
+      font-family: Poppins, sans-serif;
+      padding: 28px 18px 108px;
+    }
+    .shell { width: min(100%, 980px); margin: 0 auto; }
+    .topline {
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      border:1px solid var(--border); background:rgba(253,250,243,.72);
+      border-radius:14px; padding:10px 14px; margin-bottom:24px;
+      font: 11px "Share Tech Mono", monospace; color:var(--muted);
+      letter-spacing:.04em;
+    }
+    .topline strong { color:var(--green-dark); font-weight:400; }
+    .live-dot { display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--green); margin-right:7px; box-shadow:0 0 0 4px var(--green-bg); }
+    header { text-align:center; padding:28px 12px 30px; }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:8px; padding:7px 12px;
+      border:1px solid var(--border); border-radius:99px; background:var(--card);
+      color:var(--green-dark); font:11px "Share Tech Mono",monospace; letter-spacing:.08em;
+    }
+    h1 { font-size:clamp(30px, 6vw, 52px); line-height:1.12; margin:18px 0 10px; letter-spacing:-.045em; }
+    h1 span { color:var(--green-dark); }
+    .subtitle { max-width:570px; margin:0 auto; color:var(--muted); font-size:14px; line-height:1.8; }
+    .choice-label {
+      display:flex; align-items:center; gap:12px; margin:12px 0 16px;
+      color:var(--muted); font:11px "Share Tech Mono",monospace; letter-spacing:.12em;
+    }
+    .choice-label:before, .choice-label:after { content:""; height:1px; background:var(--border); flex:1; }
+    .cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .method {
+      position:relative; overflow:hidden; padding:25px; min-height:285px;
+      background:var(--card); border:1px solid var(--border); border-radius:22px;
+      box-shadow:var(--shadow); display:flex; flex-direction:column;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .method:hover { transform:translateY(-4px); box-shadow:0 22px 55px rgba(75,61,39,.14); }
+    .method:after {
+      content:""; position:absolute; width:170px; height:170px; border-radius:50%;
+      right:-75px; top:-82px; background:var(--green-bg); opacity:.65;
+    }
+    .method.extension:after { background:#e9e3d5; }
+    .card-head { display:flex; align-items:center; justify-content:space-between; gap:10px; position:relative; z-index:1; }
+    .icon-box {
+      width:52px; height:52px; border-radius:16px; display:grid; place-items:center;
+      background:var(--green-bg); color:var(--green-dark);
+    }
+    .extension .icon-box { background:#eee7d9; color:#766344; }
+    .icon-box svg { width:27px; height:27px; }
+    .status {
+      display:inline-flex; align-items:center; gap:7px; padding:7px 10px;
+      border-radius:99px; background:var(--green-bg); color:var(--green-dark);
+      font:10px "Share Tech Mono",monospace; letter-spacing:.06em;
+    }
+    .status:before { content:""; width:6px; height:6px; border-radius:50%; background:var(--green); }
+    .status.off { background:var(--red-bg); color:var(--red); }
+    .status.off:before { background:var(--red); }
+    .method h2 { font-size:23px; margin:23px 0 7px; letter-spacing:-.03em; }
+    .method p { color:var(--muted); font-size:13px; line-height:1.75; margin:0 0 22px; max-width:360px; }
+    .card-bottom { margin-top:auto; }
+    .go {
+      display:flex; justify-content:center; align-items:center; gap:10px;
+      width:100%; padding:13px 16px; border-radius:12px; border:0;
+      background:var(--green); color:white; text-decoration:none;
+      font:600 13px Poppins,sans-serif; cursor:pointer;
+      box-shadow:0 7px 16px rgba(63,122,77,.17); transition:.18s ease;
+    }
+    .go:hover { background:var(--green-dark); transform:translateY(-1px); }
+    .go svg { width:16px; height:16px; }
+    .go.disabled { background:#e6dfd2; color:#8c8374; box-shadow:none; cursor:not-allowed; pointer-events:none; }
+    .maintenance-note { display:none; margin-top:10px; color:var(--red); font:10px "Share Tech Mono",monospace; text-align:center; }
+    .maintenance-note.show { display:block; }
+    .bottom-note {
+      margin:22px auto 0; padding:14px 16px; border:1px dashed var(--border);
+      border-radius:14px; color:var(--muted); text-align:center;
+      font-size:11px; line-height:1.7; max-width:650px;
+    }
+    .bottom-note strong { color:var(--text); }
+    footer {
+      position:fixed; z-index:5; left:0; right:0; bottom:0;
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      padding:14px max(18px, calc((100vw - 980px)/2));
+      pointer-events:none;
+    }
+    .socials { display:flex; flex-direction:column; gap:8px; pointer-events:auto; }
+    .social-link {
+      display:flex; align-items:center; gap:8px; width:max-content; max-width:230px;
+      padding:8px 11px; border:1px solid var(--border); border-radius:99px;
+      background:rgba(253,250,243,.94); color:var(--text); text-decoration:none;
+      box-shadow:0 5px 18px rgba(75,61,39,.08); font-size:10px; font-weight:600;
+      backdrop-filter:blur(10px);
+    }
+    .social-link svg { width:17px; height:17px; flex:none; }
+    .social-link span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .social-link.whatsapp { margin-left:auto; }
+    .social-link.whatsapp svg { color:#269b5b; }
+    .credit { position:absolute; bottom:5px; left:18px; color:#9a907f; font:9px "Share Tech Mono",monospace; pointer-events:none; }
+    @media (max-width:650px) {
+      body { padding:16px 14px 125px; }
+      .topline { margin-bottom:12px; font-size:9px; }
+      header { padding:28px 5px 25px; }
+      .subtitle { font-size:12px; }
+      .cards { grid-template-columns:1fr; gap:13px; }
+      .method { min-height:250px; padding:21px; }
+      .method h2 { margin-top:18px; }
+      footer { padding:10px 12px 16px; }
+      .social-link { padding:8px 10px; font-size:9px; max-width:180px; }
+      .credit { left:14px; bottom:3px; font-size:8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *,*:before,*:after { transition:none !important; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topline">
+      <span><span class="live-dot"></span>HD UPLOAD ACCESS PORTAL</span>
+      <strong>● SYSTEM READY</strong>
+    </div>
+
+    <header>
+      <div class="eyebrow">✦ CREATOR TOOLKIT / ACCESS HUB</div>
+      <h1>TikTok <span>HD Upload by ADJN</span></h1>
+      <p class="subtitle">Pilih metode yang ingin kamu gunakan. Akses patcher atau unduh ekstensi melalui halaman resminya.</p>
+    </header>
+
+    <div class="choice-label">SELECT YOUR METHOD</div>
+
+    <section class="cards" aria-label="Pilihan metode">
+      <article class="method" id="patcher-card">
+        <div class="card-head">
+          <div class="icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 4h6v6M20 4 11 13"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/>
+            </svg>
+          </div>
+          <span class="status" id="patcher-status">AVAILABLE</span>
+        </div>
+        <h2>Web Patcher v4.0</h2>
+        <p>Gunakan tool berbasis web untuk memproses video sebelum mengunggahnya ke TikTok.</p>
+        <div class="card-bottom">
+          <a class="go" id="patcher-link" href="#" target="_blank" rel="noopener noreferrer">
+            Open Patcher
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+          <div class="maintenance-note" id="patcher-note">PATCHER IS TEMPORARILY UNDER MAINTENANCE</div>
+        </div>
+      </article>
+
+      <article class="method extension" id="extension-card">
+        <div class="card-head">
+          <div class="icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v3M8 6h8a2 2 0 0 1 2 2v3h1a2 2 0 1 1 0 4h-1v3a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-3H5a2 2 0 1 1 0-4h1V8a2 2 0 0 1 2-2Z"/>
+              <path d="M12 3a2 2 0 1 0 0 4"/>
+            </svg>
+          </div>
+          <span class="status" id="extension-status">AVAILABLE</span>
+        </div>
+        <h2>Chrome Extension</h2>
+        <p>Dapatkan ekstensi TikTok HD Upload melalui halaman unduhan yang sudah kamu sediakan.</p>
+        <div class="card-bottom">
+          <a class="go" id="extension-link" href="#" target="_blank" rel="noopener noreferrer">
+            Get Extension
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+          <div class="maintenance-note" id="extension-note">EXTENSION IS TEMPORARILY UNDER MAINTENANCE</div>
+        </div>
+      </article>
+    </section>
+
+    <div class="bottom-note">
+      <strong>Quick note:</strong> Pastikan kamu menggunakan versi terbaru dari tool. Jika salah satu metode sedang maintenance, silakan gunakan metode lainnya.
+    </div>
+  </main>
+
+  <footer>
+    <div class="socials" id="tiktok-credits"></div>
+    <a class="social-link whatsapp" id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7a11.8 11.8 0 0 0 5.7 1.5h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.5ZM12.1 21.8h-.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 0 1-1.5-5.2c0-5.5 4.5-10 10-10 2.7 0 5.2 1 7.1 2.9a9.9 9.9 0 0 1 2.9 7.1c0 5.5-4.5 9.9-9.9 9.9Zm5.5-7.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-1-2.1-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4Z"/></svg>
+      <span>WhatsApp Channel</span>
+    </a>
+    <div class="credit">DESIGNED FOR CREATORS · HD UPLOAD HUB</div>
+  </footer>
+
+  <script>
+    /*
+      ==========================================================
+      EDIT AREA — UBAH PENGATURAN DI BAGIAN INI SAJA
+      ==========================================================
+      enabled: true  = tombol aktif
+      enabled: false = maintenance
+
+      Setelah mengubah link/status, simpan lalu upload ulang HTML
+      ke hosting agar perubahan terlihat oleh semua pengunjung.
+    */
+    const HUB_CONFIG = {
+      patcher: {
+        enabled: true,
+        url: "https://edgepremium.edgeone.dev/"
+      },
+      extension: {
+        enabled: false,
+        url: "https://YOUR-EXTENSION-DOWNLOAD-PAGE.example"
+      },
+
+      // Ganti username dan URL akun TikTok kamu.
+      // Isi username tanpa tanda @.
+      tiktokCredits: [
+        { username: "F R Y 60fps", url: "https://www.tiktok.com/@itsmefachry" },
+        { username: "Rian30s ft 𝙀𝙂𝙎", url: "https://www.tiktok.com/@adek.jamannow" }
+      ],
+
+      // Ganti dengan link channel WhatsApp kamu.
+      whatsappChannel: "https://whatsapp.com/channel/0029Vb6qCMi0G0XfoomNSO0p"
+    };
+
+    const tiktokIcon = `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#25F4EE" d="M15.5 2h-3.2v13.1a3.1 3.1 0 1 1-2.7-3.1V8.7a6.3 6.3 0 1 0 5.9 6.3V8.4c1.3 1 2.9 1.6 4.6 1.7V6.8c-2.5-.1-4.4-2-4.6-4.8Z"/>
+        <path fill="#FE2C55" d="M17.1 3.5c.7 1.8 2.1 2.9 4 3.1v3.2c-1.5-.1-2.9-.5-4-1.3v6.5a6.3 6.3 0 1 1-7.5-6.2v3.3a3.1 3.1 0 1 0 2.7 3.1V2h3.2c.2.6.7 1.2 1.6 1.5Z" opacity=".9"/>
+        <path fill="#111" d="M15.5 2h-3.2v13.1a3.1 3.1 0 1 1-2.7-3.1V8.7a6.3 6.3 0 1 0 5.9 6.3V8.4c1.3 1 2.9 1.6 4.6 1.7V6.8c-2.5-.1-4.4-2-4.6-4.8Z"/>
+      </svg>`;
+
+    function setupMethod(key, label) {
+      const config = HUB_CONFIG[key];
+      const link = document.getElementById(`${key}-link`);
+      const status = document.getElementById(`${key}-status`);
+      const note = document.getElementById(`${key}-note`);
+      const active = Boolean(config.enabled && config.url && !config.url.includes("YOUR-"));
+
+      if (active) {
+        link.href = config.url;
+        link.classList.remove("disabled");
+        status.textContent = "AVAILABLE";
+        status.classList.remove("off");
+        note.classList.remove("show");
+      } else {
+        link.removeAttribute("href");
+        link.classList.add("disabled");
+        link.setAttribute("aria-disabled", "true");
+        link.textContent = "Temporarily Unavailable";
+        status.textContent = "MAINTENANCE";
+        status.classList.add("off");
+        note.classList.add("show");
+      }
+    }
+
+    setupMethod("patcher", "Patcher");
+    setupMethod("extension", "Extension");
+
+    const credits = document.getElementById("tiktok-credits");
+    HUB_CONFIG.tiktokCredits.slice(0, 2).forEach(account => {
+      const a = document.createElement("a");
+      a.className = "social-link";
+      a.href = account.url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.innerHTML = tiktokIcon + `<span>@${account.username}</span>`;
+      credits.appendChild(a);
+    });
+
+    const wa = document.getElementById("whatsapp-link");
+    wa.href = HUB_CONFIG.whatsappChannel;
+  </script>
+</body>
 </html>
